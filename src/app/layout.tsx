@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import NavbarDesktop from '../components/NavbarDesktop';
 import Footer from '../components/Footer';
+import NavbarMobile from '../components/NavbarMobile';
 
 const inter = Inter({ subsets: ["latin"], display: "block" });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         >
           <header>
             <NavbarDesktop />
+            <NavbarMobile />
           </header>
           <main className="flex flex-col items-center justify-between p-8 gap-8 max-w-7xl mx-auto">
             {children}

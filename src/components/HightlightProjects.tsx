@@ -16,7 +16,7 @@ const HighlightProjects = () => {
       ref={ref}
       initial={{ opacity: 0, x: 0, y: 10 }}
       animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: 0.1 }}
+      transition={{ duration: 0.9, delay: 0.1 }}
       className='w-full mt-16'
     >
       <span className='flex justify-start items-center gap-1 md:gap-2 mb-8'>
@@ -35,7 +35,7 @@ const HighlightProjects = () => {
                 src={'/projects/contoh.png'}
                 alt='Contoh Project'
                 fill
-                className='object-cover'
+                className='object-cover z-10'
               />
             </div>
             <p className='md:text-xl px-4 md:px-4'>E-Ticket platform for managing community event.</p>
@@ -92,7 +92,7 @@ const HighlightProjects = () => {
         </div>
       </div>
 
-      <a href='https://ngifent.com' target='_blank' className='mt-4'>
+      <a href='/projects' className='mt-4'>
         <Button className='text-xl md:text-2xl'>
           See more projects
           <ChevronRight className='ml-2' />

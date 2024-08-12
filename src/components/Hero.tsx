@@ -11,24 +11,13 @@ const Hero = () => {
     <motion.section
       initial={{ opacity: 0, x: 0, y: 10 }}
       animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.9 }}
       className='w-full pt-16'
     >
-      <div
-        className='flex flex-col md:flex-row justify-start items-start md:items-center gap-2 md:gap-4 mb-4 md:mb-8'
-      >
-        <Image
-          src={'/profile.jpeg'}
-          alt='Image profile'
-          width={80}
-          height={80}
-          className='rounded-full'
-        />
-        <h1 className='text-2xl md:text-5xl font-bold'>Adi Muhamad Firmansyah</h1>
-      </div>
+      <h1 className='text-2xl md:text-5xl mb-2 md:mb-4 font-bold'>Adi Muhamad Firmansyah</h1>
 
       <p className='text-3xl md:text-6xl lg:text-7xl'>
-        A driven full-stack developer dedicated to creating web solutions that enhance growth and success.
+        A full-stack developer focused on building scalable back-end solutions and crafting seamless user experiences.
       </p>
 
       <p className='mt-2 lg:mt-8 md:mt-4 text-xl md:text-2xl'>
