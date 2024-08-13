@@ -25,21 +25,25 @@ const Hero = () => {
       </p>
 
       <div className='flex flex-wrap gap-2 mt-4 md:mt-8'>
-        <Button
-          size='lg'
-          className='md:text-xl md:py-8'
-        >
-          Get in touch
-          <Send className='ml-1 md:ml-2 h-4 md:h-8 mr-0' />
-        </Button>
-        <Button
-          variant='outline'
-          size='lg'
-          className='md:text-xl md:py-8'
-        >
-          Download CV
-          <FileText className='ml-1 md:ml-2 h-4 md:h-8' />
-        </Button>
+        <a href="mailto:adimuhamadfirmansyah@gmail.com">
+          <Button
+            size='lg'
+            className='md:text-xl md:py-8'
+          >
+            Get in touch
+            <Send className='ml-1 md:ml-2 h-4 md:h-8 mr-0' />
+          </Button>
+        </a>
+        <a href="https://drive.google.com/file/d/1Cd6JTq5BGDiyLbf5sc2UzDY2tKEook9D/view?usp=sharing" target='_blank'>
+          <Button
+            variant='outline'
+            size='lg'
+            className='md:text-xl md:py-8'
+          >
+            Download CV
+            <FileText className='ml-1 md:ml-2 h-4 md:h-8' />
+          </Button>
+        </a>
       </div>
     </motion.section>
   )
