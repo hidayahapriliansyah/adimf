@@ -27,7 +27,7 @@ const NavbarMobile = () => {
         }
       </button>
 
-      <ul className={clsx('absolute top-16 left-0 flex flex-col gap-4 p-8 w-full bg-zinc-950 transition-all duration-500', {
+      <ul className={clsx('absolute top-16 left-0 flex flex-col gap-4 p-8 w-full bg-zinc-50 dark:bg-zinc-950 text-primary dark:text-white transition-all duration-500', {
         'translate-y-0': isOpen,
         '-translate-y-96': !isOpen,
       })}>
