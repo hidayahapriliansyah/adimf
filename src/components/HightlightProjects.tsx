@@ -47,15 +47,12 @@ const HighlightProjects = () => {
               <StackIcon name="prisma" className='w-6 sm:w-8' />
             </div>
           </div>
-          <div className='flex justify-between w-full px-4'>
+          <div className='flex justify-start w-full px-4'>
             <a href='https://ngifent.com' target='_blank'>
               <Button className='md:text-lg'>
                 Live
                 <ExternalLink className='ml-2' />
               </Button>
-            </a>
-            <a href='#' target='_blank' className='flex justify-center items-center text-white'>
-              <Github className='ml-2' />
             </a>
           </div>
         </div>

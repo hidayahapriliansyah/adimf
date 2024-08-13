@@ -89,7 +89,7 @@ const ProjectsList = () => {
         </div>
 
         <div className='flex justify-between w-full px-4'>
-          <a href='linktree-clone-it-insight-klb6vxegg.vercel.app' target='_blank'>
+          <a href='https://linktree-clone-it-insight-klb6vxegg.vercel.app' target='_blank'>
             <Button className='md:text-lg'>
               Live
               <ExternalLink className='ml-2' />
@@ -127,9 +127,6 @@ const ProjectsList = () => {
               Live
               <ExternalLink className='ml-2' />
             </Button>
-          </a>
-          <a href='#' target='_blank' className='flex justify-center items-center text-zinc-950 dark:text-white'>
-            <Github className='ml-2' />
           </a>
         </div>
       </div>
