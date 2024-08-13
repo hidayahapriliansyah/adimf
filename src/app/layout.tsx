@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter_Tight as Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
+import { Providers as ThemeProvider } from "@/components/theme-provider"
 import NavbarDesktop from '../components/NavbarDesktop';
 import Footer from '../components/Footer';
 import NavbarMobile from '../components/NavbarMobile';
@@ -34,14 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider >
           <header>
             <NavbarDesktop />
             <NavbarMobile />
