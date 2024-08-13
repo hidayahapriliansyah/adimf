@@ -38,7 +38,7 @@ const Experiences = () => {
             <div>
               <span className='block text-xl md:text-2xl mb-2'>Cloud Computing Cohort (Graduate with Distinction)</span>
               <span className='block text-xl md:text-2xl mb-2'>Bangkit Academy by Google, Goto, Traveloka  | Tasikmalaya, Indonesia</span>
-              <span className='block -xl md:text-2xl mb-2'>Feb 2023 - Jul 2024</span>
+              <span className='block -xl md:text-2xl mb-2'>Feb 2024 - Jul 2024</span>
             </div>
           </div>
         </div>
