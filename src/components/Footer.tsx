@@ -11,16 +11,16 @@ const Footer = () => {
       <span className='block w-full'>Made with Next.js by Adi Muhamad Firmansyah</span>
 
       <div className='flex flex-wrap md:justify-end gap-4 w-full mt-4 md:mt-0'>
-        <a href="#" className='text-2xl md:text-3xl'>
+        <a href="https://linkedin.com/in/hidayahapriliansyah/" target='_blank' className='text-2xl md:text-3xl'>
           <FaLinkedinIn />
         </a>
-        <a href="#" className='text-2xl md:text-3xl'>
+        <a href="https://github.com/hidayahapriliansyah" target='_blank' className='text-2xl md:text-3xl'>
           <FaGithub />
         </a>
-        <a href="#" className='text-2xl md:text-3xl'>
+        <a href="https://medium.com/@adimuhamadfirmansyah" target='_blank' className='text-2xl md:text-3xl'>
           <BsMedium />
         </a>
-        <a href="#" className='text-2xl md:text-3xl'>
+        <a href="https://www.instagram.com/hidayahapriliansyah/" target='_blank' className='text-2xl md:text-3xl'>
           <FaInstagram />
         </a>
       </div>
