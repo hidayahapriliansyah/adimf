@@ -13,10 +13,10 @@ export function ButtonTheme() {
   if (!mounted) return <div className='w-5 h-5' />
 
   if (resolvedTheme === 'dark') {
-    return <Sun className='w-5 h-5' onClick={() => setTheme('light')} />
+    return <Sun className='w-5 h-5 animate-fadeIn duration-300 hover:cursor-pointer' onClick={() => setTheme('light')} />
   }
 
   if (resolvedTheme === 'light') {
-    return <Moon className='w-5 h-5' onClick={() => setTheme('dark')} />
+    return <Moon className='w-5 h-5 animate-fadeIn duration-300 hover:cursor-pointer' onClick={() => setTheme('dark')} />
   }
 }
