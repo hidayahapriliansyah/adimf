@@ -89,7 +89,7 @@ const ProjectsList = () => {
         </div>
 
         <div className='flex justify-between w-full px-4'>
-          <a href='https://linktree-clone-it-insight-klb6vxegg.vercel.app' target='_blank'>
+          <a href='https://linktree-clone-it-insight-day.vercel.app/' target='_blank'>
             <Button className='md:text-lg'>
               Live
               <ExternalLink className='ml-2' />
@@ -208,7 +208,7 @@ const ProjectsList = () => {
           </div>
         </div>
         <div className='flex justify-between w-full px-4'>
-          <a href='https://vercel.com/hidayahapriliansyahs-projects/open-ai-codex' target='_blank'>
+          <a href='https://hidayahapr-open-ai.vercel.app/' target='_blank'>
             <Button className='md:text-lg'>
               Live
               <ExternalLink className='ml-2' />
