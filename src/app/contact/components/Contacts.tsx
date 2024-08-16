@@ -12,7 +12,7 @@ const Contacts = () => {
     <motion.div
       initial={{ opacity: 0, x: 0, y: 10 }}
       animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.9, delay: 1.8 }}
+      transition={{ duration: 0.9, delay: 0.9 }}
       className='mt-8 h-96'
     >
       <ul className='flex flex-col gap-4 text-lg md:text-2xl'>
