@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const Closing = () => {
   const ref = useRef(null)
-  const inView = useInView(ref)
+  const inView = useInView(ref, { once: true })
 
   return (
     <section className='w-full'>

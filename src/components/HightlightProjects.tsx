@@ -9,7 +9,7 @@ import { motion, useInView } from 'framer-motion'
 
 const HighlightProjects = () => {
   const ref = useRef(null)
-  const inView = useInView(ref)
+  const inView = useInView(ref, { once: true })
 
   return (
     <motion.section

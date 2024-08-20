@@ -7,7 +7,7 @@ import StackIcon from 'tech-stack-icons'
 
 const TechStack = () => {
   const ref = useRef(null)
-  const inView = useInView(ref)
+  const inView = useInView(ref, { once: true })
 
   return (
     <motion.section

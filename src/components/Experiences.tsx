@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 
 const Experiences = () => {
   const ref = useRef(null)
-  const inView = useInView(ref)
+  const inView = useInView(ref, { once: true })
 
   return (
     <motion.section
