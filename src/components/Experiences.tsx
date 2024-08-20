@@ -21,6 +21,18 @@ const Experiences = () => {
       </span>
 
       <div className='w-full'>
+
+        <div className='relative'>
+          <div className='ml-2 pl-8 pb-8'>
+            <div className='absolute top-2 left-0 w-4 h-4 bg-input'></div>
+            <div >
+              <span className='block text-xl md:text-2xl mb-2'>Back-End Developer NestJS</span>
+              <span className='block text-xl md:text-2xl mb-2'>DOT Indonesia | Intern | Remote | Tasikmalaya, Indonesia</span>
+              <span className='block -xl md:text-2xl mb-2'>Aug 2024 - Present</span>
+            </div>
+          </div>
+        </div>
+
         <div className='relative'>
           <div className='ml-2 pl-8 pb-8'>
             <div className='absolute top-2 left-0 w-4 h-4 bg-input'></div>
@@ -32,6 +44,7 @@ const Experiences = () => {
             </div>
           </div>
         </div>
+
         <div className='relative'>
           <div className='ml-2 pl-8 pb-8'>
             <div className='absolute top-2 left-0 w-4 h-4 bg-input'></div>
