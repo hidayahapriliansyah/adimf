@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { ButtonTheme } from './ButtonTheme'
+import Link from 'next/link'
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,26 +35,26 @@ const NavbarMobile = () => {
         <li className={clsx({
           'border-b-2 border-b-zinc-950 dark:border-b-white': currentPath === ''
         })}>
-          <a href="/" className={clsx('text-lg', {
+          <Link href="/" className={clsx('text-lg', {
             'font-bold': currentPath === ''
-          })}>About</a>
+          })}>About</Link>
         </li>
         <li className={clsx({
           'border-b-2 border-b-zinc-950 dark:border-b-white': currentPath === 'projects'
         })}>
-          <a href="/projects" className={clsx('text-lg', {
+          <Link href="/projects" className={clsx('text-lg', {
             'font-bold': currentPath === 'projects'
-          })}>Projects</a>
+          })}>Projects</Link>
         </li>
         <li className={clsx({
           'border-b-2 border-b-zinc-950 dark:border-b-white': currentPath === 'contact'
         })}>
-          <a href="/contact" className={clsx('text-lg', {
+          <Link href="/contact" className={clsx('text-lg', {
             'font-bold': currentPath === 'contact'
-          })}>Contact & Socials</a>
+          })}>Contact & Socials</Link>
         </li>
         <li>
-          <a href="https://medium.com/@adimuhamadfirmansyah" target='_blank' className='text-lg'>Blog</a>
+          <Link href="https://medium.com/@adimuhamadfirmansyah" target='_blank' className='text-lg'>Blog</Link>
         </li>
         <li>
           <ButtonTheme />
