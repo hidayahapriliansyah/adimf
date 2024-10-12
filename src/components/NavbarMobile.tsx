@@ -35,26 +35,34 @@ const NavbarMobile = () => {
         <li className={clsx({
           'border-b-2 border-b-zinc-950 dark:border-b-white': currentPath === ''
         })}>
-          <Link href="/" className={clsx('text-lg', {
-            'font-bold': currentPath === ''
-          })}>About</Link>
+          <Link
+            onClick={() => setIsOpen((prev) => !prev)}
+            href="/" className={clsx('text-lg', {
+              'font-bold': currentPath === ''
+            })}>About</Link>
         </li>
         <li className={clsx({
           'border-b-2 border-b-zinc-950 dark:border-b-white': currentPath === 'projects'
         })}>
-          <Link href="/projects" className={clsx('text-lg', {
-            'font-bold': currentPath === 'projects'
-          })}>Projects</Link>
+          <Link
+            onClick={() => setIsOpen((prev) => !prev)}
+            href="/projects" className={clsx('text-lg', {
+              'font-bold': currentPath === 'projects'
+            })}>Projects</Link>
         </li>
         <li className={clsx({
           'border-b-2 border-b-zinc-950 dark:border-b-white': currentPath === 'contact'
         })}>
-          <Link href="/contact" className={clsx('text-lg', {
-            'font-bold': currentPath === 'contact'
-          })}>Contact & Socials</Link>
+          <Link
+            onClick={() => setIsOpen((prev) => !prev)}
+            href="/contact" className={clsx('text-lg', {
+              'font-bold': currentPath === 'contact'
+            })}>Contact & Socials</Link>
         </li>
         <li>
-          <Link href="https://medium.com/@adimuhamadfirmansyah" target='_blank' className='text-lg'>Blog</Link>
+          <Link
+            onClick={() => setIsOpen((prev) => !prev)}
+            href="https://medium.com/@adimuhamadfirmansyah" target='_blank' className='text-lg'>Blog</Link>
         </li>
         <li>
           <ButtonTheme />
