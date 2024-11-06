@@ -2,49 +2,52 @@
 
 import { useInView, motion } from 'framer-motion'
 import { Pickaxe } from 'lucide-react'
-import React, { useRef } from 'react'
+import React from 'react'
 import StackIcon from 'tech-stack-icons'
 
 const TechStack = () => {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true })
-
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0, x: 0, y: 10 }}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 0, y: 50 }}
-      transition={{ duration: 0.5, delay: 0.1 }}
-      className='mt-8 md:mt-16 w-full'>
-      <span className='flex justify-start items-center gap-1 md:gap-2 mb-8'>
+    <section className='mt-8 md:mt-16 w-full'>
+      <motion.span
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        viewport={{ once: true }}
+        initial={{ opacity: 0, x: 30, y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 90,
+          damping: 30,
+          delay: 0.3,
+        }}
+        className='flex justify-start items-center gap-1 md:gap-2 mb-8'
+      >
         <Pickaxe className='inline md:w-7 md:h-7 lg:w-8 lg:h-8' />
         <h2 className='text-xl md:text-3xl font-semibold inline'>Tech Stack</h2>
-      </span>
+      </motion.span>
 
       <div className='flex flex-wrap gap-4 justify-center items-center'>
-        <StackIcon name="nodejs" className='w-12 md:w-16' />
-        <StackIcon name="typescript" className='w-12 md:w-16' />
-        <StackIcon name="postgresql" className='w-12 md:w-16' />
-        <StackIcon name="mysql" className='w-12 md:w-16' />
-        <StackIcon name="mongodb" className='w-12 md:w-16' />
-        <StackIcon name="prisma" className='w-12 md:w-16' />
-        <StackIcon name="nextjs2" className='w-12 md:w-16' />
-        <StackIcon name="tailwindcss" className='w-12 md:w-16' />
-        <StackIcon name="postman" className='w-12 md:w-16' />
-        <StackIcon name="figma" className='w-12 md:w-16' />
-        <StackIcon name="html5" className='w-12 md:w-16' />
-        <StackIcon name="css3" className='w-12 md:w-16' />
-        <StackIcon name="bootstrap5" className='w-12 md:w-16' />
-        <StackIcon name="gcloud" className='w-12 md:w-16' />
-        <StackIcon name="aws" className='w-12 md:w-16' />
-        <StackIcon name="git" className='w-12 md:w-16' />
-        <StackIcon name="github" className='w-12 md:w-16' />
-        <StackIcon name="vscode" className='w-12 md:w-16' />
-        <StackIcon name="reactquery" className='w-12 md:w-16' />
-        <StackIcon name="vitejs" className='w-12 md:w-16' />
-        <StackIcon name="zod" className='w-12 md:w-16' />
+        {[
+          'nodejs', 'typescript', 'postgresql', 'mysql', 'mongodb', 'prisma',
+          'nextjs2', 'tailwindcss', 'postman', 'figma', 'html5', 'css3',
+          'bootstrap5', 'gcloud', 'aws', 'git', 'github', 'vscode', 'reactquery',
+          'vitejs', 'zod'
+        ].map((iconName, index) => (
+          <motion.span
+            key={iconName}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              stiffness: 90,
+              damping: 30,
+              delay: index * 0.075, // Stagger the animation for each icon
+            }}
+          >
+            <StackIcon name={iconName} className='w-12 md:w-16' />
+          </motion.span>
+        ))}
       </div>
-    </motion.section>
+    </section>
   )
 }
 

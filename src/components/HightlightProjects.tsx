@@ -79,7 +79,7 @@ const HighlightProjects = () => {
             type: "spring",
             stiffness: 90,
             damping: 30,
-            delay: 0.6,
+            delay: 0.1,
           }}
           className='flex flex-col justify-between items-start gap-2 md:gap-4 py-4 border border-input rounded-lg'
         >
