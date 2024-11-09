@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter_Tight as Inter } from "next/font/google";
 import "./globals.css";
-import { Providers as ThemeProvider } from "@/components/theme-provider"
+import { Providers as ThemeProvider } from "@/components/theme-provider";
 import NavbarDesktop from '../components/NavbarDesktop';
 import Footer from '../components/Footer';
 import NavbarMobile from '../components/NavbarMobile';
+import SmoothScrolling from '../components/ui/scroll-wrapper';
 
 const inter = Inter({ subsets: ["latin"], display: "block" });
 
@@ -36,17 +37,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} transition-all duration-500`}>
-        <ThemeProvider >
-          <header>
-            <NavbarDesktop />
-            <NavbarMobile />
-          </header>
-          <main className="flex flex-col items-center justify-between p-8 gap-8 max-w-7xl mx-auto">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <SmoothScrolling>
+          <ThemeProvider>
+            <header>
+              <NavbarDesktop />
+              <NavbarMobile />
+            </header>
+            <main className="flex flex-col items-center justify-between p-8 gap-8 max-w-7xl mx-auto">
+              {children}
+            </main>
+            <Footer />
+          </ThemeProvider>
+        </SmoothScrolling>
       </body>
-    </html>
+    </html >
   );
 }

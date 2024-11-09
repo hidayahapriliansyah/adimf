@@ -7,7 +7,7 @@ import { ExternalLink, Github } from 'lucide-react'
 
 const ProjectCard = (project: Project) => {
   return (
-    <div className='flex flex-col justify-between items-start gap-2 md:gap-4 py-4 border border-input rounded-lg'>
+    <div className='h-full flex flex-col justify-between items-start gap-2 md:gap-4 py-4 border border-input rounded-lg'>
       <div className='flex flex-col gap-4 w-full'>
         <span className='text-lg md:text-2xl font-semibold pt-0 px-4'>{project.title}</span>
         <div className='relative w-full aspect-video'>

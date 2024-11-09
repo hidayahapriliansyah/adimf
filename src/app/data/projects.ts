@@ -93,7 +93,7 @@ export const projects: Project[] = [
     image: "prakiraan.jpeg",
     description: "Weather forecasting using openweathermap.org",
     stack: ["html5", "css3", "js"],
-    liveUrl: null,
-    github: null
+    liveUrl: "https://prakiraan-cuaca-fundamental-frontend.vercel.app/",
+    github: "https://github.com/hidayahapriliansyah/prakiraan-cuaca-fundamental-frontend",
   }
 ];

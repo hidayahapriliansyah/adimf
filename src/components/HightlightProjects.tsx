@@ -5,41 +5,51 @@ import { ChevronRight, ExternalLink, Github, Highlighter } from 'lucide-react'
 import Image from 'next/image'
 import StackIcon from 'tech-stack-icons'
 import { Button } from './ui/button'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 
 const HighlightProjects = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const title = "Highlighted Projects";
+  const titleWords = title.split("");
+
   return (
-    <section className='w-full mt-16'>
-      <motion.span
-        whileInView={{ opacity: 1, x: 0, y: 0 }}
-        viewport={{ once: true }}
-        initial={{ opacity: 0, x: 30, y: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 90,
-          damping: 30,
-        }}
-        className='flex justify-start items-center gap-1 md:gap-2 mb-8'
-      >
-        <Highlighter className='inline md:w-7 md:h-7 lg:w-8 lg:h-8' />
+    <section
+      ref={ref}
+      className='w-full mt-16'
+    >
+      <span className='flex justify-start items-center gap-1 md:gap-2 mb-8'>
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.1, ease: "easeIn" }}
+        >
+          <Highlighter className='inline md:w-7 md:h-7 lg:w-8 lg:h-8' />
+        </motion.span>
         <h2
           className='text-xl md:text-3xl font-semibold inline'
         >
-          Highlighted Projects
+          {
+            titleWords.map((tw, iTw) => (
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: iTw * 0.1, ease: "easeIn", delay: iTw * 0.05 }}
+                key={iTw}
+              >
+                {tw}
+              </motion.span>
+            ))
+          }
         </h2>
-      </motion.span>
+      </span>
 
       <div className='grid sm:grid-cols-2 gap-4 mb-4 w-full'>
         <motion.div
-          initial={{ opacity: 0, x: 0, y: 50 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            type: "spring",
-            stiffness: 90,
-            damping: 30,
-            delay: 0.3,
-          }}
+          initial={{ opacity: 0, filter: "blur(5px)" }}
+          animate={inView ? { opacity: 1, filter: "blur(0px)" } : { opacity: 0, filter: "blur(5px)" }}
+          transition={{ duration: 0.85, ease: "easeInOut" }}
           className='flex flex-col justify-between items-start py-4 border border-input rounded-lg'
         >
           <div className='flex flex-col gap-4 w-full'>
@@ -72,15 +82,9 @@ const HighlightProjects = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 0, y: 50 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            type: "spring",
-            stiffness: 90,
-            damping: 30,
-            delay: 0.1,
-          }}
+          initial={{ opacity: 0, filter: "blur(5px)" }}
+          animate={inView ? { opacity: 1, filter: "blur(0px)" } : { opacity: 0, filter: "blur(5px)" }}
+          transition={{ duration: 0.85, ease: "easeInOut", delay: 0.5 }}
           className='flex flex-col justify-between items-start gap-2 md:gap-4 py-4 border border-input rounded-lg'
         >
           <div className='flex flex-col gap-4 w-full'>
@@ -115,14 +119,12 @@ const HighlightProjects = () => {
       </div>
 
       <motion.a
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, filter: "blur(5px)" }}
+        animate={inView ? { opacity: 1, filter: "blur(0px)" } : { opacity: 0, filter: "blur(5px)" }}
         transition={{
           type: "spring",
           stiffness: 90,
           damping: 30,
-          delay: 0.6,
         }}
         href='/projects' className='mt-4 block w-fit'
       >

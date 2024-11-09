@@ -7,20 +7,35 @@ import { motion } from 'framer-motion'
 
 
 const Hero = () => {
+  const title = "Projects";
+  const titleWords = title.split("");
+
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 0, y: 10 }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.9 }}
-      className='flex justify-start items-center md:items-center gap-2 md:gap-4 mt-16 w-full'
+    <section
+      className='w-full flex mt-[63px] items-center gap-x-2'
     >
-      <BriefcaseBusiness className='w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12' />
-      <h1
-        className='text-2xl md:text-5xl font-bold'
+      <motion.span
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.1, ease: "easeIn" }}
       >
-        Projects
+        <BriefcaseBusiness className='w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12' />
+      </motion.span>
+      <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold'>
+        {
+          titleWords.map((tw, iTw) => (
+            <motion.span
+              key={iTw}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: iTw * 0.1, ease: "easeIn", delay: iTw * 0.05 }}
+            >
+              {tw}
+            </motion.span>
+          ))
+        }
       </h1>
-    </motion.div>
+    </section>
   )
 }
 

@@ -15,6 +15,9 @@ const NavbarDesktop: React.FC = () => {
 
   const handleScroll = () => {
     if (typeof window !== 'undefined') {
+      console.log('window.scrollY vs lastScrollY =>', window.scrollY + ' vs ' + lastScrollY);
+      console.log('window.scrollY > lastScrollY', window.scrollY > lastScrollY);
+
       if (window.scrollY > lastScrollY) {
         setShowNavbar(false); // Scroll ke bawah
       } else {
@@ -25,6 +28,8 @@ const NavbarDesktop: React.FC = () => {
   };
 
   useEffect(() => {
+    console.log('showNavbar =>', showNavbar)
+
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', handleScroll);
 
