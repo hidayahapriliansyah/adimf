@@ -63,10 +63,11 @@ const Hero = () => {
           animate={inView ? { opacity: 1, filter: "blur(0px)" } : { opacity: 0, filter: "blur(5px)" }}
           transition={{ delay: 3.5, duration: 0.85, ease: "easeInOut" }}
           href="mailto:adimuhamadfirmansyah@gmail.com"
+          className='w-full sm:w-auto'
         >
           <Button
             size='lg'
-            className='md:text-xl md:py-8'
+            className='md:text-xl md:py-8 w-full sm:w-auto'
           >
             Get in touch
             <Send className='ml-1 md:ml-2 h-4 md:h-8 mr-0' />
@@ -77,11 +78,12 @@ const Hero = () => {
           animate={inView ? { opacity: 1, filter: "blur(0px)" } : { opacity: 0, filter: "blur(5px)" }}
           transition={{ delay: 4, duration: 0.85, ease: "easeInOut" }}
           href="https://drive.google.com/file/d/1Cd6JTq5BGDiyLbf5sc2UzDY2tKEook9D/view?usp=sharing" target='_blank'
+          className='w-full sm:w-auto'
         >
           <Button
             variant='outline'
             size='lg'
-            className='md:text-xl md:py-8'
+            className='md:text-xl md:py-8 w-full sm:w-auto'
           >
             Download CV
             <FileText className='ml-1 md:ml-2 h-4 md:h-8' />
