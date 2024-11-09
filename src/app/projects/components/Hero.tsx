@@ -28,6 +28,7 @@ const Hero = () => {
               key={iTw}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: iTw * 0.1, ease: "easeIn", delay: iTw * 0.05 }}
             >
               {tw}
