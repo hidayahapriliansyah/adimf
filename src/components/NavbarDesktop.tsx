@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { ButtonTheme } from './ButtonTheme';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const NavbarDesktop: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -41,9 +42,11 @@ const NavbarDesktop: React.FC = () => {
   }, [lastScrollY]);
 
   return (
-    <nav
-      className={`hidden fixed md:flex justify-center items-center w-full top-0 left-0 z-50 bg-zinc-50 dark:bg-zinc-950 border-b border-b-input text-white py-4 px-8 transition-transform duration-300 ${showNavbar ? 'transform translate-y-0' : 'transform -translate-y-full'
-        }`}
+    <motion.nav
+      initial={{ opacity: 0, filter: "blur(5px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.3 }}
+      className={`hidden fixed md:flex justify-center items-center w-full top-0 left-0 z-50 bg-zinc-50 dark:bg-zinc-950 border-b border-b-input text-white py-4 px-8 transition-transform duration-300 ${showNavbar ? 'transform translate-y-0' : 'transform -translate-y-full'}`}
     >
       <ul className='flex items-center gap-8 max-w-7xl mx-auto text-primary dark:text-white'>
         <li className={clsx({
@@ -74,7 +77,7 @@ const NavbarDesktop: React.FC = () => {
           <ButtonTheme />
         </li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 
