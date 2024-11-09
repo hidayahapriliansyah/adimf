@@ -5,7 +5,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 const SmoothScrolling = ({ children }: { children: React.ReactNode }) => {
   const lenisOptions = {
     lerp: 0.1,
-    duration: 1.5,
+    duration: 0.8,
     smoothTouch: false,
     smooth: true,
   };
