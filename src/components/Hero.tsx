@@ -77,7 +77,7 @@ const Hero = () => {
           initial={{ opacity: 0, filter: "blur(5px)" }}
           animate={inView ? { opacity: 1, filter: "blur(0px)" } : { opacity: 0, filter: "blur(5px)" }}
           transition={{ delay: 4, duration: 0.85, ease: "easeInOut" }}
-          href="https://drive.google.com/file/d/1Cd6JTq5BGDiyLbf5sc2UzDY2tKEook9D/view?usp=sharing" target='_blank'
+          href="https://docs.google.com/document/d/1GNzSKMLIMO7RhhOmnli4_m3hZUKKRKftgbxkd8_ipuo/edit?usp=sharing" target='_blank'
           className='w-full sm:w-auto'
         >
           <Button
